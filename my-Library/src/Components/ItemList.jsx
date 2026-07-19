@@ -1,4 +1,5 @@
 import React, { useState} from 'react'
+import Items from './Items';
 
 function ItemList() {
     const storedMovies = [
@@ -11,6 +12,8 @@ function ItemList() {
 
     const [movies, setMovies] = useState(storedMovies);
     const [newTitle, setNewTitle] = useState("");
+    const availableMovies = movies.length
+    
 
     const handleAddMovie = (event) => {
         event.preventDefault();
@@ -23,6 +26,10 @@ function ItemList() {
             setMovies([...movies, newMovie])
             setNewTitle("")
     }
+    const handleDeleteMovie = (id) => {
+      const updatedMovies = movies.filter(movie => movie.id !== id)
+      setMovies(updatedMovies)
+    }
   return (
     <>
       <div>
@@ -31,6 +38,9 @@ function ItemList() {
             <input type="text" placeholder='Title' value={newTitle} onChange={(event) => setNewTitle(event.target.value)} />
             <button type='submit'>Add</button>
         </form>
+        <ul>
+            {availableMovies > 0 ? movies.map((movie) => <Items key={movie.id} movie={movie} onDelete={handleDeleteMovie} />) : (<p>No Movie Added</p>)}
+        </ul>
       </div>
     </>
   )
