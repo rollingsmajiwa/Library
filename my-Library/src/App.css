@@ -32,13 +32,16 @@ button {
     background-color: rgb(203, 72, 57);
     
     color: black;
-    font: bold; border: none;
+    border: none;
     border-radius: 5px;
     padding: 5px;
+    font-weight: bold;
 }
 .movieItem {
     background-color:  rgb(23, 21, 21);
-    border: black;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    padding: 1rem;
 
 }
 .movieBox ul {
