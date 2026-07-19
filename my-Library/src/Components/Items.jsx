@@ -5,9 +5,9 @@ function Items({movie, onDelete}) {
   return (
     <>
     <li>
-        <div>
+        <div className='movieItem'>
             <h2>{movie.title}</h2>
-            <button type='submit' onClick={() => onDelete(movie.id)}></button>
+            <button type='submit' onClick={() => onDelete(movie.id)}>Delete</button>
         </div>
     </li>
       

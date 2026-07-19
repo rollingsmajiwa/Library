@@ -32,7 +32,7 @@ function ItemList() {
     }
   return (
     <>
-      <div>
+      <div className='movieBox'>
         <h1>My Movies</h1>
         <form action="#" onSubmit={handleAddMovie}>
             <input type="text" placeholder='Title' value={newTitle} onChange={(event) => setNewTitle(event.target.value)} />
