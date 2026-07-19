@@ -20,14 +20,21 @@ h1 {
 }
 input {
     width: 100%;
-    padding: 6px;
+    padding: 0.7rem;
     border-radius: 4px;
-    background-color: white;
-    color: black;
-    font: 600;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
     outline: none;
     margin-bottom: 4px;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(20px);
+    z-index: 50;
+    outline: none;
+    border: 1px solid white;
+
 }
+
 button {
     background-color: rgb(203, 72, 57);
     
